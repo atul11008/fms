@@ -1,0 +1,504 @@
+
+
+<!--  -->
+<!DOCTYPE html> 
+
+<html> 
+
+  
+
+<head> 
+
+    <!--Import Google Icon Font-->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+   <link rel="manifest" href="manifest.webmanifest">
+   <link rel="icon" href="https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/120063788/original/77bd7a29733abdc2f9229b35a86cc5b06c3240d8/do-the-best-to-make-my-customer-happy.jpg" type="image/icon type">
+   <link rel="stylesheet" href="https://raw.githubusercontent.com/cubiq/add-to-homescreen/master/style/addtohomescreen.css">
+  <meta name="viewport" content= "width=device-width, user-scalable=no">
+
+    <!--Import materialize.css-->
+
+   
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> 
+
+  
+
+    <!-- Compiled and minified JavaScript -->
+  <script src= "https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">  </script> 
+<script  type="text/javascript" >
+  
+  </script>
+  <style>
+    *{
+    
+    
+    }
+    .content{
+      overflow:auto;
+    }
+    .p-center {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    }
+    /* /increase sizeof btn / */
+    .bottom-sheet{
+    max-height: 75% !important;
+    border-top-left-radius: 25px !important;
+    border-top-right-radius: 25px  !important;
+    }
+    .bottom-sheet .modal.content{
+    width: 60%;
+    margin: 0px auto
+    }
+    .form{
+    margin-top:5rem;
+    }
+    
+    #add_user{
+    margin-top:2rem;
+    }
+    nav{
+    background:#1b5e20;
+    }
+    
+    .splash-screen{
+    width:100vw;
+    height:100vh;
+    display:grid;
+    place-items:center;
+    font-family:"sans-serif";
+    font-size:2rem;
+    background: linear-gradient(90deg, #E91E63 , #673AB7);
+    } 
+    .web-name{
+    opacity:0;
+    animation-name: text;
+    animation-duration: 10s ;
+    
+    }
+    @keyframes text{
+    from{opacity:0 ;}
+    to{opacity:100;;}
+    }
+    @keyframes anime {
+    from {transform:rotate(0deg);font-size:0rem; }
+    to { transform:rotate(360deg); font-size:5rem;}
+    }
+    .splash-screen .app-text i{
+    font-size:0rem;
+    animation-name: anime;
+    animation-duration: 1.5s ;
+     
+    ;
+    }
+    .app{
+    display:none;
+    }
+    .nav-wrapper .material-icons{
+    color:#fff;
+    }
+    .verified{
+    color:#1b5e20;
+    }
+   #add_user  .btn-large{
+    width:100%;
+    border-radius:35px;
+    background: linear-gradient(180deg, #E91E63 , #673AB7);
+    
+    }
+    
+    .add-button {
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    }
+    
+   /* table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100vw;
+    border: 1px solid #ddd;
+    overflow-x:auto;
+    
+    }
+    
+ 
+    
+    tr:nth-child(even){background-color: #f2f2f2};
+    
+    #test1{
+    overflow:auto
+    margin-bottom:3rem;
+    }
+    */
+    th, td {
+    text-align:left;
+    padding:5px;
+    }
+    nav{
+     
+     
+    }
+    #test1,#test2,#add_user{
+     
+    }
+  </style>
+<!--Let browser know website is optimized for mobile-->
+<meta name="theme-color" content="#1b5e20">
+    <meta name="viewport"
+
+          content="width=device-width, 
+
+                   initial-scale=1.0" /> 
+<meta name="mobile-web-app-capable" content="yes">
+
+</head> 
+
+  
+
+<body onload="">
+
+  <div class="splash-screen">
+    <div class="app-text">
+   <i class="material-icons" >data_usage</i>
+     
+    </div>
+  </div>
+  <div class="app">
+  <div class="fixed-action-btn">
+  <a   data-target="modal1" class="modal-trigger btn-floating btn-large red">
+  <i class="large material-icons">mode_edit</i>
+  </a>
+  </div>
+    <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo"><i class="material-icons" >data_usage</i>StRpAs </a>
+       <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" ><i class="material-icons menu right dropdown-trigger" data-target='dropdown1' >more_vert</i></a>
+       
+     <i class="material-icons  search-icon right">search</i>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+ 
+      </ul>
+    </div>
+    <div class="nav-content">  
+      <ul class="tabs tabs-transparent">
+        <li class="tab"><a href="#test1" class="active" >  <i class="material-icons">home</i></a></li>
+        <li class="tab"><a  href="#test2"><i class="material-icons"> verified_user </i></a>
+         <li class="tab"><a  href="#add_user"><i class="material-icons"> group_add </i></a>
+      
+      </ul>
+    </div>
+  </nav>
+  <ul class="sidenav" id="mobile-demo">
+    <li>
+      <div class="user-view">
+      <div class="background" id="bc">
+        <img id="img" src="https://picsum.photos/400/400">
+      </div>
+      <a href="#user"><img class="circle" src="  https://media-public.canva.com/MAAuycD--Wg/1/screen.svg "></a>
+        <a href="#name"><span class="white-text name">JHKBB <i class="material-icons verified">verified</i></span></a>
+      <a href="#email"><span class="white-text email">jhkbbb@gmail.com</span></a>
+    </div></li>
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">JavaScript</a></li>
+    <li><button onlclick="toggleFullScreen()">full</button></li>
+    
+  </ul>
+  
+  <div id="test1" class="col s12">
+  
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+  
+    <div class="content ">
+    
+     <table class="striped" id="myTable">
+     <thead>
+    <tr>
+    <th>Username</th>
+    <th>Adhhar Number</th>
+    <th>Phone Number</th>
+     <th>Adress</th>
+     <th>S/O</th>
+     
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="header">
+    
+    </tr>
+    </tbody>
+    </table>
+   
+    <!-- Modal Structure -->
+    
+    </div>
+    </div>
+    
+     <div id="test2" class="col s4">
+    
+       <table class=" stripped ">
+        <thead>
+          <tr>
+            <th><p>Username</p></th>
+            <th><p>Adress</p></th>
+            <th><p>Adhhar</p></th>
+            "
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Santosh Singh  <i class="material-icons verified" >verified</i></td>
+            <td>Sewrahan</td>
+            <td>6378238464</td>
+           
+          </tr>
+          <tr>
+            <td>Kishori Shah  <i class="material-icons verified" >verified</i>  </td>
+            <td>Ghiwadhar</td>
+            <td>64748456738</td>
+            
+          </tr>
+          <tr>
+            <td>Virendra Singh  <i class="material-icons verified" >verified</i> </td>
+            <td>Vishunpura</td>
+            <td>7646373298</td>
+            
+          </tr>
+        </tbody> 
+      </table>
+       </div>
+  <div id="add_user" class="col s12">
+      <div class="input-field col s6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="user_name" type="text" class="validate">
+          <label for="user_name">Username</label>
+        </div>
+      <div class="input-field col s6">
+          <i class="material-icons prefix">credit_card</i>
+          <input id="adhar" type="tel" class="validate"  maxlength="12" min="12" >
+          <label for="adhar">Addhar Number</label>
+        </div>
+      <div class="input-field col s6">
+          <i class="material-icons prefix">phone</i>
+          <input id="phone" type="tel" class="validate" maxlength="10" min="10">
+          <label for="phone">Phone Number</label>
+        </div>
+      
+          <div class="input-field col s12">
+            <i class="material-icons prefix">home</i>
+            <textarea id="textarea2" class="materialize-textarea" data-length="120"></textarea>
+            <label for="textarea2">Address</label>
+          </div>
+          
+          <div class="input-field col s12">
+          <i class="material-icons prefix">done_all</i>
+          <input type="text" id="so" class="validate" data-length="120"></textarea>
+          <label for="so">S/O (optional)</label>
+          </div>
+          
+        <button class="waves-effect waves-light btn-large s12" onclick="addEmployee()">Add</button>
+
+  </div>
+  
+<!--  dont remove last div       -->
+    </div>
+  
+  
+ <script type="text/javascript" >
+ 
+$(document).ready(function(){
+    $('.fixed-action-btn').floatingActionButton();
+  });
+  
+$(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+
+
+$(document).ready(function(){
+    $('.tabs').tabs();
+   
+  });
+
+
+function toggleFullScreen() {
+  var doc = window.document;
+  var docEl = doc.documentElement;
+
+  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+    requestFullScreen.call(docEl);
+  }
+  else {
+    cancelFullScreen.call(doc);
+  }
+}
+  const splash=document.querySelector('.splash-screen');
+  const screen=document.querySelector('.app');
+   setTimeout(function(){
+        splash.style.display='none';
+        screen.style.display='block';
+  }, 5000);
+
+setInterval(function(){
+    const img=document.querySelector("#img");
+    const random=Math.floor(Math.random() * 1000);
+    img.src='https://picsum.photos/400/400?random='+random+''
+},20000)
+
+//prefixes of implementation that we want to test
+window.indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB;
+
+//prefixes of window.IDB objects
+window.IDBTransaction = window.IDBTransaction || window.webkitIDBTransaction || window.msIDBTransaction;
+window.IDBKeyRange = window.IDBKeyRange || window.webkitIDBKeyRange || window.msIDBKeyRange
+
+if (!window.indexedDB) {
+    window.alert("Your browser doesn't support a stable version of IndexedDB.")
+}
+
+const employeeData = [];
+
+var db;
+var request = window.indexedDB.open("newDatabase", 1);
+
+request.onerror = function (event) {
+    console.log("error: ");
+};
+
+request.onsuccess = function (event) {
+    db = request.result;
+    console.log("success: " + db);
+    loadTable();
+};
+
+request.onupgradeneeded = function (event) {
+    var db = event.target.result;
+    var objectStore = db.createObjectStore("employee", {
+        keyPath: "adhar"
+    });
+
+    for (var i in employeeData) {
+        objectStore.add(employeeData[i]);
+    }
+}
+
+function loadTable() {
+    var employees = "";
+    $('.employee').remove();
+
+    var objectStore = db.transaction("employee").objectStore("employee");
+    objectStore.openCursor().onsuccess = function (event) {
+        var cursor = event.target.result;
+        if (cursor) {
+            employees = employees.concat(
+             
+                '<tr class="employee">' +
+                '<td class="ID">' + cursor.value.name + '</td>' +
+                '<td class="Name">' + cursor.value.adhar + '</td>' +
+                '<td class="Age">' + cursor.value.phone + '</td>' +
+                '<td class="Email">' + cursor.value.adress+ '</td>' +
+                '<td class="so">' + cursor.value.SO+ '</td>' +
+                
+                '</tr>');
+
+            cursor.continue(); // wait for next event
+        } else {
+            $('.header').after(employees); // no more events
+        }
+    };
+}
+
+function addEmployee() {
+    var employeeID = $('user_name').val();
+    var name = $('#user_name').val();
+    var adhar = $('#adhar').val();
+    var  phone= $('#phone').val();
+    var  SO= $('#so').val();
+    var adress=$('#textarea2').val()
+    var request = db.transaction(["employee"], "readwrite")
+        .objectStore("employee")
+        .add({
+            id: employeeID,
+            name: name,
+            adhar: adhar,
+            adress:adress,
+            phone: phone,
+            SO:SO
+        });
+
+    request.onsuccess = function (event) {
+        loadTable();
+        clearButtons();
+    };
+
+    request.onerror = function (event) {
+        alert("error");
+    }
+}
+
+function deleteEmployee() {
+    var employeeID = $('#delete_id');
+    var request = db.transaction(["employee"], "readwrite")
+        .objectStore("employee")
+        .delete(employeeID);
+
+    request.onsuccess = function (event) {
+        loadTable();
+        clearButtons();
+    };
+}
+
+function clearButtons() {
+    $('#user_name').val("");
+    $('#adhar').val("");
+    $('#phone').val("");
+    $('#textarea2').val("");
+    $('#so').val("");
+  }
+function myFunction() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+addToHomescreen();
+</script> 
+  
+  
+
+    <!--JavaScript at end of body for optimized loading-->
+   
+    <script type="text/javascript" src="js/materialize.min.js"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/add-to-homescreen@3.2.6/dist/addtohomescreen.min.js"></script>
+</body> 
+
+
+  
+
+</html> 
